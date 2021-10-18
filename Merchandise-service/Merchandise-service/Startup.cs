@@ -30,7 +30,7 @@ namespace Merchandise_service
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context => { await context.Response.WriteAsync("Hello world"); });
+                endpoints.MapGet("/", async context => { await context.Response.WriteAsync("Hello from docker"); });
             });
         }
     }
