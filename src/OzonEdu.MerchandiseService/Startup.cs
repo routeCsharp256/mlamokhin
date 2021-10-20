@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Merchandise_service
+namespace OzonEdu.MerchandiseService
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace Merchandise_service
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context => { await context.Response.WriteAsync("Hello from docker"); });
+                endpoints.MapGet("/", async context => { await context.Response.WriteAsync("Hello World from docker!"); });
             });
         }
     }

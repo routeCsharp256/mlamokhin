@@ -1,6 +1,6 @@
 ﻿{
-    "profiles": {
-        "Merchandise_service": {
+    "profiles": {    
+    "OzonEdu.MerchandiseService": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
