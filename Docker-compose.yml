@@ -11,9 +11,17 @@ services:
             - stock-api
     supply-service:
         image: "ghcr.io/ozon-edu-csharp-2021/supply-service:main"
+        ports:
+            - "8001:80"
     emailing-service:
         image: "ghcr.io/ozon-edu-csharp-2021/emailing-service:main"
+        ports:
+            - "8002:80"
     employees-service:
         image: "ghcr.io/ozon-edu-csharp-2021/employees-service:main"
+        ports:
+            - "8003:80"
     stock-api:
         image: "ghcr.io/ozon-edu-csharp-2021/stock-api:main"
+        ports:
+            - "8004:80"
