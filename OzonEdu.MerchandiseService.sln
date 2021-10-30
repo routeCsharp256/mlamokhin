@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DE2BEE48-9C6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService", "src\OzonEdu.MerchandiseService\OzonEdu.MerchandiseService.csproj", "{4A6DC05A-9A10-4F57-A41C-C6EA40CA506F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Grpc", "src\OzonEdu.MerchandiseService.Grpc\OzonEdu.MerchandiseService.Grpc.csproj", "{EF66064B-DE5A-46BF-925E-5943AB1C0A64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.HttpClient", "src\OzonEdu.MerchandiseService.HttpClient\OzonEdu.MerchandiseService.HttpClient.csproj", "{68172D7B-12FD-43DF-AC9D-5D4A305CD442}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,11 +22,21 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4A6DC05A-9A10-4F57-A41C-C6EA40CA506F} = {DE2BEE48-9C62-487A-AF90-0F9C372AF56C}
+		{EF66064B-DE5A-46BF-925E-5943AB1C0A64} = {DE2BEE48-9C62-487A-AF90-0F9C372AF56C}
+		{68172D7B-12FD-43DF-AC9D-5D4A305CD442} = {DE2BEE48-9C62-487A-AF90-0F9C372AF56C}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4A6DC05A-9A10-4F57-A41C-C6EA40CA506F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A6DC05A-9A10-4F57-A41C-C6EA40CA506F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A6DC05A-9A10-4F57-A41C-C6EA40CA506F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A6DC05A-9A10-4F57-A41C-C6EA40CA506F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF66064B-DE5A-46BF-925E-5943AB1C0A64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF66064B-DE5A-46BF-925E-5943AB1C0A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF66064B-DE5A-46BF-925E-5943AB1C0A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF66064B-DE5A-46BF-925E-5943AB1C0A64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68172D7B-12FD-43DF-AC9D-5D4A305CD442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68172D7B-12FD-43DF-AC9D-5D4A305CD442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68172D7B-12FD-43DF-AC9D-5D4A305CD442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68172D7B-12FD-43DF-AC9D-5D4A305CD442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

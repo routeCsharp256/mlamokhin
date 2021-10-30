@@ -5,4 +5,17 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Infrastructure\Swagger" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\OzonEdu.MerchandiseService.Grpc\OzonEdu.MerchandiseService.Grpc.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
+      <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.2.0" />
+    </ItemGroup>
+
 </Project>

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+service MerchandiseApiGrpc {
+  rpc GetAllMerchandiseItems(GetAllItemsRequest) returns (GetAllItemsResponse);
+  rpc GetMerchandiseItemById(GetItemByIdRequest) returns (ItemResponseUnit);
+}
+
+message GetAllItemsRequest
+{
+  
+}
+
+
+message GetAllItemsResponse {
+  repeated ItemResponseUnit stocks = 1;
+}
+
+message ItemResponseUnit {
+  int64 item_id = 1;
+  string item_name = 2;
+  int32 quantity = 3;
+}
+
+
+message GetItemByIdRequest
+{
+  int64 item_id=1;
+}
