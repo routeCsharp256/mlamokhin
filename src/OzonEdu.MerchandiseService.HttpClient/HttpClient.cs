@@ -9,6 +9,7 @@ namespace OzonEdu.MerchandiseService.HttpClient
     public interface IMerchandiseHttpClient
     {
         Task<List<MerchItemResponse>> GetAll(CancellationToken token);
+        Task<MerchItemResponse> GetById(long id, CancellationToken token);
     }
 
     public class MerchandiseHttpClient : IMerchandiseHttpClient
