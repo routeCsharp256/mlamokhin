@@ -38,28 +38,10 @@ namespace OzonEdu.MerchandiseServiceInfrastructure.Middlewares
                                    $"Path: {context.Request.Path} " +
                                    $"QueryString: {context.Request.QueryString}\r\n " +
                                    $"Headers: {string.Join("\r\n    ",context.Request.Headers)}\r\n"+
-                                   $"Request Body: {ReadStreamInChunks(requestStream)}");
+                                   $"Request Body: {await new StreamReader(requestStream).ReadToEndAsync()}");
             context.Request.Body.Position = 0;
         }
-        private static string ReadStreamInChunks(Stream stream)
-        {
-            const int readChunkBufferLength = 4096;
-            stream.Seek(0, SeekOrigin.Begin);
-            using var textWriter = new StringWriter();
-            using var reader = new StreamReader(stream);
-            var readChunk = new char[readChunkBufferLength];
-            int readChunkLength;
-            do
-            {
-                readChunkLength = reader.ReadBlock(readChunk, 
-                    0, 
-                    readChunkBufferLength);
-                textWriter.Write(readChunk, 0, readChunkLength);
-            } while (readChunkLength > 0);
-            return textWriter.ToString();
-        }
-        
-        
+
         private async Task LogResponse(HttpContext context)
         {
             try
