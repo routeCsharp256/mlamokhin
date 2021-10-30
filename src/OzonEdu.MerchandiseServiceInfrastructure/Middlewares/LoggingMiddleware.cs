@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.IO;
 
-namespace OzonEdu.MerchandiseService.Infrastructure.Middlewares
+namespace OzonEdu.MerchandiseServiceInfrastructure.Middlewares
 {
     public class LoggingMiddleware
     {

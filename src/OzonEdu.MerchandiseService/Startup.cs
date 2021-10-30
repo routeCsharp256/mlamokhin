@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OzonEdu.MerchandiseService.GrpcServices;
-using OzonEdu.MerchandiseService.Infrastructure.Interceptors;
+using OzonEdu.MerchandiseServiceInfrastructure.Interceptors;
 using OzonEdu.MerchandiseService.Services.Interfaces;
 
 namespace OzonEdu.MerchandiseService

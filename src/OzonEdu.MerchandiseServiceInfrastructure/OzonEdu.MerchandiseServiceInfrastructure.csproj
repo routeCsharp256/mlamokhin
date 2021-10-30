@@ -1,19 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\OzonEdu.MerchandiseService.Grpc\OzonEdu.MerchandiseService.Grpc.csproj" />
-      <ProjectReference Include="..\OzonEdu.MerchandiseServiceInfrastructure\OzonEdu.MerchandiseServiceInfrastructure.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
+      <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
       <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.2.0" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.2.3" />
     </ItemGroup>
 
 </Project>

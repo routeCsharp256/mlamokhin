@@ -5,7 +5,7 @@ using Grpc.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using OzonEdu.MerchandiseService.GrpcServices;
-using OzonEdu.MerchandiseService.Infrastructure.Middlewares;
+using OzonEdu.MerchandiseServiceInfrastructure.Middlewares;
 using OzonEdu.MerchandiseService.Services.Interfaces;
 
 namespace OzonEdu.MerchandiseService.GrpcServices

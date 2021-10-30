@@ -5,10 +5,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using OzonEdu.MerchandiseService.Infrastructure.Filters;
-using OzonEdu.MerchandiseService.Infrastructure.StartupFilters;
+using OzonEdu.MerchandiseServiceInfrastructure.Filters;
+using OzonEdu.MerchandiseServiceInfrastructure.StartupFilters;
 
-namespace OzonEdu.MerchandiseService.Infrastructure.Extensions
+
+namespace OzonEdu.MerchandiseServiceInfrastructure
 {
     public static class HostBuilderExtensions
     {
@@ -19,12 +20,13 @@ namespace OzonEdu.MerchandiseService.Infrastructure.Extensions
                  services.AddSingleton<IStartupFilter, TerminalStartupFilter>();
                 
                  services.AddSingleton<IStartupFilter, SwaggerStartupFilter>();
+                 
+                 
                 services.AddSwaggerGen(options =>
                 {
                     options.SwaggerDoc("v1", new OpenApiInfo {Title = "OzonEdu.MerchandiseServiceApi", Version = "v1"});
                 
-                    options.CustomSchemaIds(x => x.FullName);               
-                   
+                    options.CustomSchemaIds(x => x.FullName);
                 });
             });
             return builder;
