@@ -4,6 +4,7 @@ using System.Reflection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using OzonEdu.MerchandiseService.Infrastructure.Filters;
 using OzonEdu.MerchandiseService.Infrastructure.StartupFilters;
 
@@ -16,20 +17,15 @@ namespace OzonEdu.MerchandiseService.Infrastructure.Extensions
             builder.ConfigureServices(services =>
             {
                  services.AddSingleton<IStartupFilter, TerminalStartupFilter>();
-                //
-                // services.AddSingleton<IStartupFilter, SwaggerStartupFilter>();
-                // services.AddSwaggerGen(options =>
-                // {
-                //     options.SwaggerDoc("v1", new OpenApiInfo {Title = "OzonEdu.StockApi", Version = "v1"});
-                //
-                //     options.CustomSchemaIds(x => x.FullName);
-                //
-                //     var xmlFileName = Assembly.GetExecutingAssembly().GetName().Name + ".xml";
-                //     var xmlFilePath = Path.Combine(AppContext.BaseDirectory, xmlFileName);
-                //     options.IncludeXmlComments(xmlFilePath);
-                //
-                //     options.OperationFilter<HeaderOperationFilter>();
-                // });
+                
+                 services.AddSingleton<IStartupFilter, SwaggerStartupFilter>();
+                services.AddSwaggerGen(options =>
+                {
+                    options.SwaggerDoc("v1", new OpenApiInfo {Title = "OzonEdu.MerchandiseServiceApi", Version = "v1"});
+                
+                    options.CustomSchemaIds(x => x.FullName);               
+                   
+                });
             });
             return builder;
         }
